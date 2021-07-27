@@ -1,0 +1,28 @@
+.blog-entry {
+    line-height: 22px;
+    margin-bottom: 80px;
+  
+    &__meta {
+      margin-bottom: 30px;
+      padding-left: 20px;
+      border-left: 2px solid white;
+  
+      div {
+        margin-top: -10px;
+      }
+    }
+
+    &__content {
+        padding-left: 20px;
+    }
+  
+    &__button {
+      position: absolute;
+      right: 30px;
+      top: 37px;
+    }
+  
+    img {
+      max-width: 100%;
+    }
+}

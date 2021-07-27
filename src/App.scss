@@ -1,0 +1,162 @@
+$purple: #800047;
+$blue: #008bca;
+$standard-font: Arial, Helvetica, sans-serif;
+
+.App {
+  font-family: $standard-font;
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: 14px;
+  color: white;
+  overflow: auto;
+}
+
+input {
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 8px;
+  border: 0;
+  margin-top: 5px;
+  outline: none;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.welcome-headline {
+  padding-top: 100px;
+  text-align: center;
+  padding-bottom: 30px;
+  color: white;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.error-message {
+  color: red;
+  display: block;
+  margin-top: 10px;
+
+  &--small {
+    font-size: 12px;
+  }
+}
+
+/*
+  MAIN NAVIGATION
+*/
+.main-navigation {
+  padding-bottom: 20px;
+
+  ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  ul li {
+    display: inline-block;
+
+    a,
+    button {
+      font-size: 14px;
+      color: black;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 20px;
+      display: inline-block;
+      cursor: pointer;
+      font-family: $standard-font;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        margin: auto;
+        text-align: center;
+        background-color: black;
+        transition: width 0.5s ease-out;
+      }
+
+      &.active:after,
+      &:hover:after {
+        width: 100%;
+      }
+    }
+
+    button {
+      border: 0;
+      background: none;
+    }
+  }
+}
+
+.meta-navigation ul {
+  display: flex;
+  justify-self: flex-end;
+}
+
+/*
+  MAIN AREA / CONTENT
+*/
+
+.main {
+  width: 80%;
+  margin: 30px auto;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: 0;
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+
+  &:hover {
+    background-color: gray;
+  }
+
+  &.success {
+    background: rgb(0 129 0);
+    color: white;
+
+    &:hover {
+      background: rgb(0 129 0 / .5);
+    }
+  }
+}
+
+.edit-button {
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 20px;
+}
+
+header {
+  .logo-holder {
+    text-align: center;
+    
+    img {
+      max-width: 250px;
+    }
+  }
+}

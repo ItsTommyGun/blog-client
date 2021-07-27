@@ -1,0 +1,35 @@
+.login-container {
+  width: 250px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+
+  label {
+    color: black;
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+  }
+
+  button {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+      background-color: #212121;
+      color: white;
+    }
+  }
+}
