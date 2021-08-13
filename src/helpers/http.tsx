@@ -1,4 +1,6 @@
+import ENVIRONMENT_URL from "./environmentUrl";
 import PORT from "./port";
+
 
 type Data = {
   [key: string]: string;
@@ -10,7 +12,7 @@ export function getTokenFromStorage() {
 
 export function postRequest(url: string, data: Data) {
   const token = localStorage.getItem("token");
-  return fetch(`http://localhost:${PORT}/${url}`, {
+  return fetch(`${ENVIRONMENT_URL}/${url}`, {
     method: "POST",
     mode: "cors",
     cache: "no-cache",
@@ -25,7 +27,7 @@ export function postRequest(url: string, data: Data) {
 
 export function getRequest(url: string) {
   const token = localStorage.getItem("token");
-  return fetch(`http://localhost:${PORT}/${url}`, {
+  return fetch(`${ENVIRONMENT_URL}/${url}`, {
     method: "GET",
     mode: "cors",
     cache: "no-cache",
@@ -39,7 +41,7 @@ export function getRequest(url: string) {
 
 export function deleteRequest(url: string, userId: string) {
   const token = localStorage.getItem("token");
-  return fetch(`http://localhost:${PORT}/${url}/${userId}`, {
+  return fetch(`${ENVIRONMENT_URL}/${url}/${userId}`, {
     method: "DELETE",
     mode: "cors",
     cache: "no-cache",
@@ -53,7 +55,7 @@ export function deleteRequest(url: string, userId: string) {
 
 export function putRequest(url: string, data: Data) {
   const token = localStorage.getItem("token");
-  return fetch(`http://localhost:${PORT}/${url}`, {
+  return fetch(`${ENVIRONMENT_URL}/${url}`, {
     method: "DELETE",
     mode: "cors",
     cache: "no-cache",
