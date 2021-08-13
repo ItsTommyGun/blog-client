@@ -1,6 +1,4 @@
 import ENVIRONMENT_URL from "./environmentUrl";
-import PORT from "./port";
-
 
 type Data = {
   [key: string]: string;
