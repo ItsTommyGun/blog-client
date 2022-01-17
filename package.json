@@ -28,7 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build-deploy": "react-scripts build && rm -rf ../api/build/* && mv build ../api",
+    "build-deploy": "react-scripts build && rm -rf ../blog-api/build/* && mv build ../blog-api",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
