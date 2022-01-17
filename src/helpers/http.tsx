@@ -54,7 +54,7 @@ export function deleteRequest(url: string, userId: string) {
 export function putRequest(url: string, data: Data) {
   const token = localStorage.getItem("token");
   return fetch(`${ENVIRONMENT_URL}/${url}`, {
-    method: "DELETE",
+    method: "PUT",
     mode: "cors",
     cache: "no-cache",
     credentials: "include",
